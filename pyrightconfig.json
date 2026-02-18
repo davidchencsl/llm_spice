@@ -1,0 +1,4 @@
+{
+    "ignore": ["experiments"],
+    "reportIncompatibleMethodOverride": "none"
+}

@@ -1,0 +1,65 @@
+[project]
+name = "llm-spice"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "dill>=0.4.0",
+    "fire>=0.7.1",
+    "joblib>=1.5.2",
+    "jupyter>=1.1.1",
+    "matplotlib>=3.10.5",
+    "multiprocess>=0.70.18",
+    "networkx>=3.4.2",
+    "numpy>=2.2.6",
+    "optuna>=4.5.0",
+    "pandas>=2.3.2",
+    "pyright>=1.1.406",
+    "python-dotenv>=1.1.1",
+    "ruff>=0.13.1",
+    "scipy>=1.16.3",
+    "seaborn>=0.13.2",
+    "snakeviz>=2.2.2",
+    "tabulate>=0.9.0",
+    "tqdm>=4.67.1",
+    "transformers>=4.56.2",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4.1",
+]
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "."
+]
+markers = [
+  "slow"
+]
+
+[tool.ruff]
+include = [
+  "llm_spice/**/*"
+]
+
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+# Exclude non-Python and non-package folders from distribution
+exclude = [
+  "webui/**",
+  "experiments/**",
+  "tests/**",
+  ".venv/**",
+  ".pytest_cache/**",
+  ".ruff_cache/**",
+  "test.ipynb",
+]
+
+[tool.hatch.build.targets.wheel]
+# Only package the Python module
+packages = ["llm_spice"]
