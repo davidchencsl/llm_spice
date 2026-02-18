@@ -13,12 +13,6 @@ else
     source $HOME/.local/bin/env
 fi
 
-if [[ "$(uname)" == "Linux" ]]; then
-    uv python pin pypy@3.10
-elif [[ "$(uname)" == "Darwin" ]]; then # macOS
-    uv python pin 3.10
-elif [[ "$(uname)" == *"MINGW"* ]]; then # Git Bash on Windows
-    uv python pin 3.10
-fi
+uv python pin 3.13
 
 uv run python scripts/download_trace.py
