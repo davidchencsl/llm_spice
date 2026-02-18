@@ -372,12 +372,12 @@ Use `run_static paf` or `run_online paf` commands for PAF disaggregation.
 
 ## License
 
-[Add your license information here]
+[TBD]
 
 ## Citation
 
 If you use this framework in your research, please cite:
 
 ```bibtex
-[Add citation information if applicable]
+[TBD]
 ```
